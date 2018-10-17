@@ -19,7 +19,7 @@ int main(void){
         }
 
         //print hashtags
-        for(int j=0; j<i+1 ; j++){
+        for(int j=0; j<i+2 ; j++){
             printf ("#");
         }
 
