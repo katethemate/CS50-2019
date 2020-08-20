@@ -1,3 +1,3 @@
-# my cs50 implementations of 2019
+# My CS50 implementations of 2019
 
-https://cs50.harvard.edu/x/2020/psets/1/
+Each problem set has a link to the official problem description of the course in the README.md file. 
