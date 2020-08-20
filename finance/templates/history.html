@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Shares</th>
+      <th scope="col">Action</th>
+      <th scope="col">Price</th>
+      <th scope="col">Total</th>
+      <th scope="col">time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in transactions %}
+        <tr>
+          <td>{{ row["symbol"] }}</td>
+          <td>{{ row["shares"]*(-1) }}</td>
+          <td>{{ row["action"] }}</td>
+          <td>{{ row["price"] | usd }}</td>
+          <td>{{ (row["price"]*row["shares"]*(-1)) | usd }}</td>
+          <td>{{ row["time"] }}</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}
